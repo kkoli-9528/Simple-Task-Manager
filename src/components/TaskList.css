@@ -1,0 +1,49 @@
+.container {
+  margin-top: 5%;
+  width: clamp(15rem, 12.321rem + 13.39vw, 24.75rem);
+}
+
+.tabs {
+  float: right;
+}
+
+.tab-buttons {
+  margin-right: 10px;
+  padding: 4px;
+  margin-bottom: 10px;
+  background: transparent;
+  border: 2px inset transparent;
+  cursor: pointer;
+}
+
+.tab-buttons:hover,
+.tab-buttons[aria-pressed="true"] {
+  background-color: rgb(107, 107, 107);
+  border: 2px inset rgb(255, 255, 255);
+}
+
+.tab-buttons:last-child {
+  margin-right: 0;
+}
+
+.radio {}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+thead {
+  background-color: dark;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+  text-align: center;
+}
