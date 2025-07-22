@@ -38,7 +38,7 @@ export function ComboboxDemo({ handleSelect }) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-[127px] justify-between lg:w-40"
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
@@ -46,7 +46,7 @@ export function ComboboxDemo({ handleSelect }) {
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0">
+      <PopoverContent className="w-32 p-0 lg:w-40">
         <Command>
           <CommandList>
             <CommandGroup>

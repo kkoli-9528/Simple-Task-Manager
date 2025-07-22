@@ -23,8 +23,7 @@ const TaskList = ({ task }) => {
       <div className={`tabs mb-5`}>
         <ComboboxDemo handleSelect={handleSelect} />
       </div>
-      {/* <TabelDemo filterList={filterList} /> */}
-      <TableDemo />
+      <TableDemo filterList={filterList} />
     </div>
   );
 };
