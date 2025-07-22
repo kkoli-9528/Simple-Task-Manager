@@ -38,7 +38,7 @@ export function ComboboxDemo({ handleSelect }) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[127px] justify-between lg:w-40"
+          className="w-[127px] cursor-pointer justify-between lg:w-40"
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
@@ -54,6 +54,7 @@ export function ComboboxDemo({ handleSelect }) {
                 <CommandItem
                   key={framework.value}
                   value={framework.value}
+                  className="cursor-pointer"
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue)
                     handleSelect(currentValue === value ? "" : currentValue)

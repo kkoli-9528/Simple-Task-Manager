@@ -46,8 +46,19 @@ const TaskForm = ({ setTask }) => {
       <div className={styles.containerLayout}>
         <form className={styles.formCointainer} onSubmit={handleSubmit}>
           <div className="flex flex-col justify-between gap-y-3 w-full sm:flex-row gap-x-2 lg:w-full">
-            <Input type="text" className={`${styles.taskTitle}`} name="title" id="task-title" placeholder="New Task" value={title} onChange={(e) => setTitle(e.target.value)} />
-            <Button type="submit" className={`${styles.submitButton} bg-black text-white px-4 py-2 rounded-md`}>
+            <Input
+              type="text"
+              className={`${styles.taskTitle}`}
+              name="title"
+              id="task-title"
+              placeholder="New Task"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <Button
+              type="submit"
+              className={`${styles.submitButton} cursor-pointer bg-black text-white px-4 py-2 rounded-md`}
+            >
               Add Task
             </Button>
           </div>

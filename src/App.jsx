@@ -7,6 +7,8 @@ import TaskItem from './components/TaskItem';
 function App() {
   const [task, setTask] = useState([]);
 
+  console.log(task)
+
   return (
     <div className={styles.App}>
       <div className={`${styles.container} md:min-w-sm flex flex-col justify-center items-center xl:min-w-md`}>
