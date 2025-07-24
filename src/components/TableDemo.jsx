@@ -7,15 +7,12 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { ComboboxDropdownMenu } from "./ComboboxDropdownMenu";
+import { updateTaskStatus } from "./utils/taskUtils";
 
 export const TableDemo = ({ filterList, setTask }) => {
 
   const handleStatus = (value, id) => {
-    setTask(prevState => {
-      return prevState.map(item =>
-        item.id === id ? { ...item, status: value } : item
-      );
-    });
+    setTask(prevState => updateTaskStatus(prevState, id, value));
   };
 
   return (
