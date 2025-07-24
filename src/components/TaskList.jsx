@@ -2,26 +2,23 @@ import { useState } from 'react';
 import './TaskList.css';
 import { ComboboxDemo } from './ComboDemo';
 import { TableDemo } from './TableDemo';
+import useFilteredTasks from './Custom Hooks/useFilteredTasks';
 
-const TaskList = ({ task }) => {
+const TaskList = ({ task, setTask }) => {
   const [selected, setSelected] = useState("All");
 
-  const filterList = task.filter(eachTask =>
-    selected === "All" ?
-      true :
-      eachTask.status === selected
-  );
+  const filterList = useFilteredTasks(task, selected)
 
   const handleSelect = (button) => {
     setSelected(button)
   }
 
   return (
-    <div className="container">
-      <div className={`tabs mb-5`}>
+    <div className="container flex flex-col mt-4">
+      <div className={`tabs mb-4 flex justify-end`}>
         <ComboboxDemo handleSelect={handleSelect} />
       </div>
-      <TableDemo filterList={filterList} />
+      <TableDemo filterList={filterList} setTask={setTask} />
     </div>
   );
 };
